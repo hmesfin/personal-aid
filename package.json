@@ -1,0 +1,28 @@
+{
+  "name": "personal-aid",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:backend": "cd backend && uv run python run.py",
+    "dev:frontend": "tauri dev",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:sidecar": "cd backend && uv run pyinstaller -F run.py --name personal-aid-api-x86_64-pc-windows-msvc --distpath ../src-tauri/binaries --paths src --clean",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test:backend": "cd backend && uv run pytest tests/ -v"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-opener": "^2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10",
+    "@tauri-apps/cli": "^2"
+  }
+}

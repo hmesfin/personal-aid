@@ -1,36 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
 # Python
 __pycache__/
 *.py[cod]
 *.egg-info/
-dist/
-build/
 .venv/
-venv/
-*.egg
 
-# Node / Frontend
-node_modules/
-dist/
-.nuxt/
-.output/
+# Sidecar binaries (built by PyInstaller)
+src-tauri/binaries/*.exe
+backend/build/
+backend/dist/
+*.spec
 
-# Tauri
+# Rust
 src-tauri/target/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.local
-.env.*.local
-
-# Agent state
-.agent-state.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
